@@ -15,6 +15,6 @@ A robust Python CLI tool that automatically categorizes incoming files and ensur
 Clone the repository and install the required dependencies:
 
 ```bash
-git clone [https://github.com/IsaDoom/File-Migration.git](https://github.com/IsaDoom/File-Migration.git)
+git clone https://github.com/IsaDoom/File-Migration.git
 cd File-Migration
 pip install -r requirements.txt
