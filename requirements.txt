@@ -1,0 +1,5 @@
+# Test dependencies
+pytest>=7.4.0
+
+# Future roadmap dependencies
+watchdog>=3.0.0

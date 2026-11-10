@@ -1,0 +1,90 @@
+# ==========================================
+# Secure Automated File Organizer & Integrity Checker
+# Custom Project Exclusions
+# ==========================================
+# Ignore the local folders you use for testing the script
+/incoming/
+/organized/
+/_quarantine/
+
+# Ignore the manifest if generated in the root during testing
+.integrity/
+manifest.jsonl
+
+# ==========================================
+# Standard Python Exclusions
+# ==========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.sweed
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables
+.env
+
+# ==========================================
+# OS and IDE Exclusions
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# VS Code
+.vscode/
+
+# PyCharm / IntelliJ
+.idea/
