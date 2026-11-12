@@ -128,8 +128,7 @@ def process_file(src: Path, dest_root: Path, quarantine: Path, manifest: Manifes
     category = categorize(src)
     target_dir = dest_root / category
     target_dir.mkdir(parents=True, exist_ok=True)
-    new_name = f"{src.stem}_organized{src.suffix}"
-    target = unique_path(target_dir / new_name)
+    target = unique_path(target_dir / src.name)
 
     hash_before = sha256_file(src)
     shutil.copy2(src, target)  # copy first, delete source only after proof
