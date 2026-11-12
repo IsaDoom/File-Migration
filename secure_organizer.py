@@ -99,7 +99,7 @@ class Manifest:
         return problems
 
 
-# ------------------------------------------------------------- core logic ----
+#Core logic
 def categorize(path: Path) -> str:
     ext = path.suffix.lower()
     for category, extensions in CATEGORIES.items():
@@ -128,7 +128,8 @@ def process_file(src: Path, dest_root: Path, quarantine: Path, manifest: Manifes
     category = categorize(src)
     target_dir = dest_root / category
     target_dir.mkdir(parents=True, exist_ok=True)
-    target = unique_path(target_dir / src.name)
+    new_name = f"{src.stem}_organized{src.suffix}"
+    target = unique_path(target_dir / new_name)
 
     hash_before = sha256_file(src)
     shutil.copy2(src, target)  # copy first, delete source only after proof
@@ -221,7 +222,7 @@ def run_verify(dest: Path, manifest: Manifest) -> int:
     return 0
 
 
-# ------------------------------------------------------------------- CLI ----
+#CLI
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("mode", choices=["watch", "once", "verify"])
